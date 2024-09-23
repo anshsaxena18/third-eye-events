@@ -1,0 +1,731 @@
+/*Google fonts(poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --theameColor: hsl(45, 18%, 96%);
+}
+
+*{
+    font-family: "poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform:capitalize;
+    transition: 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+body{
+    background:#FFC100;
+}
+
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+.header-img{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    background-color: transparent !important;
+}
+
+.header .logo span{
+    color: var(--theme0color);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.header.navbar a:hover{
+    color: var(--theme0color);
+}
+
+#menu-bar{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.home .content{
+    text-align: center;
+    padding-top: 6rem;
+    margin: 2rem auto;
+    max-width: 70rem;
+}
+
+.home .content h3{
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .content h3 span{
+    color: var(--theme0color);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    border-radius: 0.5rem;
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.btn:hover{
+    background: var(--theme0color);
+}
+
+.home .home-slider .swiper-slide{
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 50rem;
+    width: 35rem;
+}
+
+.home .home-slider .swiper-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: var(--theme0color);
+    text-transform: uppercase;
+}
+
+.service .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+}
+
+.service .box-container .box{
+    border-radius: 0.5rem;
+    background-color: #333;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.service .box-container .box div {
+    height: 5rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    background: var(--theme0color);
+    color: #fff;
+}
+
+.service .box-container .box h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.service .box-container .box p {
+    font-size: 1.4rem;
+    color: #eee;
+    line-height: 1.8;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    padding: 1rem;
+}
+
+.about .row .image img{
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1rem solid #333;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+}
+
+.about .row .content h3 {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery .box-container .box {
+    position: relative;
+    border: 1rem solid #333;
+    border-radius: 0.5rem;
+    height: 25rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery .box-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow();
+}
+
+.gallery .box-container .box .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:#333;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.gallery .box-container .box:hover title {
+    top:0%;
+}
+
+.gallery .box-container .box .icon {
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    right: 0;
+    background: #333;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+gallery .box-container .box:hover .icon {
+    bottom: 0;
+}
+
+.gallery .box-container .box .icon a {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0.5rem 1rem;
+}
+
+.gallery .box-container .box .icon a:hover {
+    color: var(--theme0color);
+}
+
+.review .box {
+    border-radius: 0.5rem;
+    background: #333;
+    padding: 2rem;
+    position: relative;
+}
+
+.review .box .fa-qoute-right {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--theme0color);
+    font-size: 5rem;
+}
+
+.review .box .user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.review .box .user img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review .box .user h3 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.review .box .user span {
+    font-size: 1.5rem;
+    color: #eee;
+}
+
+.review .box p {
+    line-height: 2;
+    color: #eee;
+    padding: 0.5rem 0;
+    font-size: 1.6rem;
+}
+/*
+.content form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.content form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+textarea {
+    width: 100%;
+    background: #333;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.7rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: none;
+}
+
+.contact form .inputBox input::placeholder,
+textarea::placeholder {
+    color: #eee;
+    text-transform: capitalize;
+}
+
+.contact form .inputBox input:focus,
+textarea:focus{
+    background: #444;
+}
+
+.contact form .inputBox input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+/* General styles for the form */
+form {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 20px auto; /* Center the form on the page */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Styles for input boxes */
+.InputBox {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the inputs */
+    margin-bottom: 15px; /* Space between input boxes */
+}
+
+.InputBox input {
+    flex: 1; /* Allow inputs to grow */
+    margin-right: 10px; /* Right margin for spacing */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+/* Remove the right margin from the last input */
+.InputBox input:last-child {
+    margin-right: 0; /* No margin for the last input */
+}
+
+/* Styles for the textarea */
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the textarea */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Styles for the submit button */
+.btn {
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #333; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .InputBox {
+        flex-direction: column; /* Stack inputs vertically on small screens */
+    }
+
+    .InputBox input {
+        margin-right: 0; /* No right margin */
+        margin-bottom: 10px; /* Bottom margin for spacing */
+    }
+
+    .InputBox input:last-child {
+        margin-bottom: 0; /* No bottom margin for the last input */
+    }
+}
+
+.footer{
+    background: #111;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem , 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #eee;
+}
+
+.footer .box-container .box a i {
+    padding-right: 1.5rem;
+    color: var(--theme0color);
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 1.5rem;
+    color: #fff;
+}
+
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid #222;
+    color: #fff;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+}
+
+.footer .credit span {
+    color: var(--theme0color);
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+webkit ::-webkit-scrollbar-track{
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--theme0color);
+    border-radius: 5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: white;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.video-card {
+    color:white;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background-color: #ddd;
+    position: relative;
+}
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 12px;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    max-height: 2.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.channel-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #ddd;
+}
+
+.channel-name {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.video-meta {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+/*.theme-toggler {
+    position: fixed;
+    top: 10rem;
+    right: -20rem;
+    background: #333;
+    z-index: 1000;
+    width: 20rem;
+    text-align: center;
+}
+
+.theme-toggler.active{
+    right: 0;
+}
+
+.theme-toggler h3{
+    color: #fff;
+    padding: 1rem;
+}
+
+.theme-toggler .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.theme-toggler .buttons .theme-btn {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-toggler .togger-btn {
+    position: absolute;
+    top: 0;
+    left: -5.9rem;
+    padding: 1.3rem 1.5rem;
+    background: #333;
+    cursor: pointer;
+}
+
+.theme-toggler .togger-btn i {
+    color: #fff;
+    font: 3rem;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+}*/
+
+/* menu Bar */
+/* Basic styles for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navbar styles for larger screens */
+.navbar a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease;
+}
+
+/* Show the mobile menu when active */
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Mobile menu links */
+.mobile-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    font-size: 18px;
+}
+
+.mobile-menu a:hover {
+    background-color: #555;
+}
+
+/* Menu bar icon */
+#menu-bar {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    
+    #menu-bar {
+        display: block;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    cursor: pointer;
+  background-color: #333;
+    font-size: 24px; /* Adjust size as needed */
+    color: white; /* Change color if needed */
+    position: absolute; /* Position it as needed */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+}
+
+#mobile-menu {
+    display: none;
+    
+}
+
+#mobile-menu.active {
+    display: block;
+  
+}
+
+#mobile-menu {
+    position: absolute;
+    z-index: 1000;
+    
+}
+
