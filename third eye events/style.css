@@ -134,6 +134,7 @@ body{
 }
 .box-container{
     width: 100%;
+    display: flex;
 }
 
 .service .box-container {
@@ -147,6 +148,9 @@ body{
     background-color: #333;
     text-align: center;
     padding: 2.5rem;
+}
+.footer_logo{
+    width: 80px;
 }
 
 .service .box-container .box div {
@@ -468,12 +472,27 @@ textarea {
 }
 
 .footer .credit{
+display: flex ;
+justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     border-top: .1rem solid #222;
     color: #fff;
     padding: 2rem;
     padding-top: 2.5rem;
     font-size: 2rem;
+}
+
+#map {
+    height: 400px; /* Set the height of the map */
+    width: 100%;   /* Set the width of the map */
+}
+
+.credit>h1{
+    width: 70%;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
 .footer .credit span {

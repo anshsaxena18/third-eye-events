@@ -57,3 +57,15 @@ var reviewSwiper = new Swiper(".review-slider", {
       mobileMenu.classList.remove('active');
   });
   
+
+  function initMap() {
+    const location = { lat: 28.367, lng: 79.415 }; // Coordinates for Bareilly, Uttar Pradesh, India
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 8,
+        center: location,
+    });
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+    });
+}
