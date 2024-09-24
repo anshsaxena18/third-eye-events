@@ -748,9 +748,14 @@ h2 {
   .review .heading span {
     color: #ff6347;
   }
+  .swiper-slide {
+    width: auto;  /* Adjust slide width */
+  }
   
   .swiper-container {
+    width: 100%;
     padding: 20px 0;
+    
   }
   
   .swiper-wrapper {
