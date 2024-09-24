@@ -1,3 +1,4 @@
+
 var swiper = new Swiper(".home-slider", {
   effect: "coverflow",
   grabCursor: true,
@@ -44,28 +45,17 @@ var reviewSwiper = new Swiper(".review-slider", {
 
 
 
-  // JavaScript to toggle mobile menu
-  const menuBar = document.getElementById('menu-bar');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeBtn = document.getElementById('close-btn');
-  
-  menuBar.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-  });
-  
-  closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-  });
-  
 
-  function initMap() {
-    const location = { lat: 28.367, lng: 79.415 }; // Coordinates for Bareilly, Uttar Pradesh, India
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 8,
-        center: location,
-    });
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map,
-    });
-}
+// JavaScript to toggle mobile menu
+const menuBar = document.getElementById('menu-bar');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-btn');
+
+menuBar.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+});
+
