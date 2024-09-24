@@ -132,6 +132,9 @@ body{
     color: var(--theme0color);
     text-transform: uppercase;
 }
+.box-container{
+    width: 100%;
+}
 
 .service .box-container {
     display: grid;
@@ -490,6 +493,90 @@ webkit ::-webkit-scrollbar-track{
     border-radius: 5rem;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: white;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.video-card {
+    color:white;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background-color: #ddd;
+    position: relative;
+}
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 12px;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    max-height: 2.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.channel-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #ddd;
+}
+
+.channel-name {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.video-meta {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
 /*.theme-toggler {
     position: fixed;
     top: 10rem;
@@ -545,3 +632,184 @@ webkit ::-webkit-scrollbar-track{
     }
 }*/
 
+/* menu Bar */
+/* Basic styles for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.logo img {
+    width: 80px;
+    /* height: 50px; */
+}
+
+/* Navbar styles for larger screens */
+.navbar a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease;
+}
+
+/* Show the mobile menu when active */
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Mobile menu links */
+.mobile-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    font-size: 18px;
+}
+
+.mobile-menu a:hover {
+    background-color: #555;
+}
+
+/* Menu bar icon */
+#menu-bar {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    
+    #menu-bar {
+        display: block;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    cursor: pointer;
+  background-color: #333;
+    font-size: 24px; /* Adjust size as needed */
+    color: white; /* Change color if needed */
+    position: absolute; /* Position it as needed */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+}
+
+#mobile-menu {
+    display: none;
+    
+}
+
+#mobile-menu.active {
+    display: block;
+  
+}
+
+#mobile-menu {
+    position: absolute;
+    z-index: 1000;
+    
+}
+
+  /* Review Section */
+  .review {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .review .heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .review .heading span {
+    color: #ff6347;
+  }
+  
+  .swiper-container {
+    padding: 20px 0;
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  .swiper-slide .fas.fa-quote-right {
+    font-size: 24px;
+    color: #ff6347;
+    margin-bottom: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .user-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .user-info span {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  blockquote {
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+  }
+  
+  /* Swiper Pagination and Navigation */
+  .swiper-pagination {
+    margin-top: 10px;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #ff6347;
+  }
